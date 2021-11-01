@@ -1,0 +1,57 @@
+- HTML cheat sheet
+- 1일 1commit
+- https://dev.habitmaker.co.kr/
+
+! + tab html 자동 완성 (htmlko + tab)
+command+p 사용자 코드 조각 user snippets
+
+
+VS Code web editor (https://vscode.dev/)
+Github web editor (.)
+
+
+Git add .
+Git commit
+Git push
+
+
+WebAssembly https://www.youtube.com/watch?v=VJag_H2Cosc
+
+powerShell https://docs.microsoft.com/ko-kr/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.1
+
+
+https://nolboo.kim/blog/2013/10/06/github-for-beginner/
+https://sirong.tistory.com/25
+
+https://www.daram-k.com/github-dev-web-editor
+
+검색창 노출시키기 https://velog.io/@eona1301/Github-Blog-%EA%B2%80%EC%83%89%EC%B0%BD-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0
+
+Jekyll favicon https://min9nim.github.io/2018/03/add-favicon/
+
+Emmet cheat sheet https://docs.emmet.io/cheat-sheet/
+
+단축키
+Tag + tab
+Tag1 + Tag2 + tab
+Tag{} + tab
+Tag#id + tab
+Tag.class + tab
+
+table>(tr>(td*4))*3
+
+ctrl+delete
+Lorem
+
+
+"> " 이거는 부모 밑에 자식을 태그를 넣을 때 사용
+"+" 형제태그 밑에 덧붙여서 사용 으로 생각하시면 편하실거 같아요 (nico가 알려줘서) 
+"."  태그에 클래스 붙이기
+"#" 태그에 id 붙이기
+
+www.naver.com	이름	URL
+223.130.200.107	주소	IP
+http://paullab.synology.me/:80	Port	문
+
+
+Hr 사용 자제 : 브라우저에서 동일하지 않을 수도
