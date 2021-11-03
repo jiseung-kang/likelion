@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+    <style>
+        table, tr, th, td {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>책이름</th>
+                <th>책가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>hello1</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>hello2</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hello3</td>
+                <td>3000</td>
+                <!-- <td rowspan="2">rowspan</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">총 판매량</td>
+                <td>6000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
