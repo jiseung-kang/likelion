@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nero</title>
+    <style>
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+        }
+
+        .nero {
+            position: relative;
+            margin: 50px auto;
+            width: 200px;
+            height: 370px;
+        }
+
+        .nero .ear {
+            position: absolute;
+            top: 170px;
+            width: 60px;
+            height: 60px;
+            border: 3px solid darkgrey;
+
+            background: black;
+        }
+
+        .nero .ear.left {
+            border-radius: 30px 70px 0px 0px;
+            left: 20px;
+        }
+
+        .nero .ear.right {
+            border-radius: 70px 30px 0px 0px;
+            right: 20px;
+        }
+
+        .nero .innerear {
+            position: absolute;
+            top: 180px;
+            width: 30px;
+            height: 40px;
+            background: darkgrey;
+        }
+
+        .nero .innerear.left {
+            border-radius: 30px 70px 0px 0px;
+            left: 30px;
+        }
+
+        .nero .innerear.right {
+            border-radius: 70px 30px 0px 0px;
+            right: 30px;
+        }
+
+        .nero .face {
+            position: absolute;
+            bottom: 0;
+            width: 200px;
+            height: 180px;
+            border-radius: 100%;
+            border: 10px solid black;
+            background: black;
+        }
+
+
+        .nero .eye {
+            position: absolute;
+            top: 60px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background: olive;
+        }
+
+        .nero .eye.left {
+            left: 98px;
+        }
+
+        .nero .eye.right {
+            right: 98px;
+        }
+
+        .nero .innereye {
+            position: absolute;
+            top: 70px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: black;
+            z-index: 1;
+        }
+
+        .nero .innereye.left {
+            left: 100px;
+        }
+
+        .nero .innereye.right {
+            right: 100px;
+        }
+
+        .nero .nose {
+            position: absolute;
+            top: 100px;
+            left: 95px;
+            margin-left: -16px;
+            width: 20px;
+            height: 15px;
+            border-radius: 30% 30% 70% 70%;
+            background: grey;
+            z-index: 2;
+        }
+
+        .nero .mouth {
+            position: absolute;
+            top: 85px;
+            right: 73px;
+            width: 25px;
+            height: 40px;
+            border-bottom: 4px solid rgb(158, 145, 145);
+            border-radius: 40%;
+        }
+
+        .nero .mouth.left {
+            left: 65px;
+            z-index: 1;
+        }
+
+        .nero .mouth.right {
+            right: 65px;
+            z-index: 1;
+        }
+
+        .nero .hair {
+            position: absolute;
+            top: 300px;
+            width: 70px;
+            height: 5px;
+            border: 3px solid grey;
+            border-radius: 40%;
+            background: grey;
+
+        }
+
+        .nero .hair.left {
+            left: -20px;
+            z-index: 1;
+        }
+
+        .nero .hair.left.top {
+            top: 280px;
+            transform: rotate(20deg);
+        }
+
+        .nero .hair.left.down {
+            top: 320px;
+            transform: rotate(-20deg);
+        }
+
+        .nero .hair.right {
+            right: -20px;
+            z-index: 1;
+        }
+
+        .nero .hair.right.top {
+            top: 280px;
+            transform: rotate(160deg);
+        }
+
+        .nero .hair.right.down {
+            top: 320px;
+            transform: rotate(200deg);
+        }
+
+        .nero .necklace {
+            position: absolute;
+            top: 330px;
+            left: 50px;
+            width: 100px;
+            height: 50px;
+            border-bottom: 5px solid red;
+            border-radius: 100%;
+        }
+
+        .nero .necklace2 {
+            position: absolute;
+            top: 368px;
+            left: 88px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            background: gold;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nero">
+        <div class="ear left"></div>
+        <div class="innerear left"></div>
+        <div class="ear right"></div>
+        <div class="innerear right"></div>
+
+        <div class="face">
+            <div class="innereye left"></div>
+            <div class="innereye right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth left"></div>
+            <div class="mouth right"></div>
+        </div>
+
+        <div class="hair left"></div>
+        <div class="hair left top"></div>
+        <div class="hair left down"></div>
+        <div class="hair right"></div>
+        <div class="hair right top"></div>
+        <div class="hair right down"></div>
+
+        <div class="necklace"></div>
+        <div class="necklace2"></div>
+    </div>
+</body>
+
+</html>

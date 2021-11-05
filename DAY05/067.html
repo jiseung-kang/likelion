@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            font-size: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 300px;
+            height: 100px;
+        }
+
+        div.top {
+            background: rgb(68,108,160);
+        }
+
+        div.bottom {
+            background: rgb(233,214,49);
+        }
+        ul {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        ul::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        li {
+            list-style-type: none;            
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+        li.one {
+            background: rgb(65,144,58);
+        }
+
+        li.two {
+            background: rgb(149,60,49);
+        }
+
+        li.three {
+            background: rgb(92,52,121);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="top"></div>
+        <ul>
+            <li class="one"></li>
+            <li class="two"></li>
+            <li class="three"></li>
+        </ul>
+        <div class="bottom"></div>
+    </section>
+</body>
+
+</html>
