@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse</title>
+    <style>
+        @keyframes move {
+            0% {transform: translate(0, 0);}
+            18% {transform: translate(300px, 0);}
+            33% {transform: translate(300px, 300px);}
+            48% {transform: translate(0, 300px);}
+            63% {transform: translate(300px, 300px);}
+            77% {transform: translate(300px, 0);}
+            100% {transform: translate(0, 0);}
+        }
+
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: pink;
+            animation: move 6s alternate infinite;
+        }
+    </style>
+</head>
+<body>
+    <div>hello</div>
+</body>
+</html>
