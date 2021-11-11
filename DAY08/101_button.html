@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @keyframes color {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(0, 0);
+                background-color: whitesmoke;
+                color: none;
+                font-weight: 500;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn {
+            cursor: pointer;
+            position: relative;
+            padding: 10px 10px;
+            background: whitesmoke;
+            font-size: 24px;
+            border: none;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            transition: all .3s;
+        }
+
+        .btn:after{
+            top: -10px;
+            left: -10px;
+            border-top: 3px solid pink;
+            border-left: 3px solid pink;
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transition: all .5s;
+        }
+
+        .btn:before {
+            bottom: -10px;
+            right: -10px;
+            border-bottom: 3px solid skyblue;
+            border-right: 3px solid skyblue;
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transition: all .5s;
+        }
+
+        .btn:hover {
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .btn:hover:before,
+        .btn:hover:after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn:active {
+            animation: 1s color;
+        }
+
+        .container {
+            background:whitesmoke;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn">Click</button>
+    </div>
+</body>
+
+</html>
