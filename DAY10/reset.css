@@ -24,7 +24,7 @@ time, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+body, article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, main {
     display: block;
 }
@@ -60,3 +60,7 @@ img{
     height:0;
     font-size:0;
     line-height:0}
+
+    input:not(:placeholder-shown):invalid, input:focus:required:invalid {
+        border: none;
+    }

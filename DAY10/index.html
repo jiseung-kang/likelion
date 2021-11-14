@@ -5,62 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>log-in</title>
     <link rel="stylesheet" href="reset.css">
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <style>
         body {
             background: #F2F2F2;
+            text-align: center;
+
         }
 
         #app {
-            font-family: "Spoqa Han Sans Neo";
+            padding-left: 50%;
+            height: 100%;
+            font-family: 'Spoqa Han Sans Neo';
             font-style: normal;
-            text-align: center;
+            font-weight: 400;
         }
-        .login-box {
+
+        .box-login {
             position: absolute;
-            top: 360px;
-            left: 710px;
             background-color: #FFFFFF;
             width: 500px;
             height: 240px;
+            top: 281px;
+            left: 50%;
+            margin-left: -250px;
             border: 1px solid #C4C4C4;
-            border-radius: 5px;;
+            border-radius: 5px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .login-box .login-box_logo {
+        .img-logo {
             width: 138px;
             height: 40px;
             margin-top: 30px;
-            margin-left:auto;
-            margin-right:auto;
+            margin-left: auto;
+            margin-right: auto;
             box-sizing: border-box;
             border-radius: 5px;
         }
 
-        .login-box .login-box_desc {
+        .login_desc {
             margin-top: 28px;
-            margin-left:auto;
-            margin-right:auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .login-box_login-btn {
+        .btn-login {
             margin-top: 32px;
             width: 440px;
             height: 60px;
             border-radius: 5px;
             background: #2F80ED;
-            border: none;
-            box-shadow: none;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration-line: none;
-        }
-        .login-box_login-btn .login-box_txt {
             text-decoration-line: none;
             font-size: 22px;
             font-weight: 700;
@@ -72,15 +74,14 @@
 
 <body>
     <main id="app">
-        <section class="login-box">
+        <section class="box-login">
             <header>
-                <img src="weniv-logo.png" alt="weniv-logo" class="login-box_logo">
-                <p class="login-box_desc">위니브를 더 즐겁고 편리하게 이용하세요</p>
+                <img src="img/weniv-logo.png" alt="weniv-logo" class="img-logo">
+                <p class="login_desc">위니브를 더 즐겁고 편리하게 이용하세요</p>
             </header>
-            <a href="modal.html" class="login-box_login-btn">
-                <p class="login-box_txt">로그인</p>
-            </a>
+            <a href="modal.html" class="btn-login">로그인</a>
         </section>
     </main>
 </body>
+
 </html>
