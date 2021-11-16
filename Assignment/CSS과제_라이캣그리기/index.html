@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>licat</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(95, 54, 148);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .licat {
+            position: relative;
+            top: 100px;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .hair_back {
+            position: absolute;
+            width: 140%;
+            left: -83px;
+            top: -122px;
+            z-index: -10;
+        }
+
+        .hair_front {
+            width: 40%;
+            position: absolute;
+            left: 127px;
+            top: -20px;
+            z-index: 40;
+            transform: rotate(7deg);
+        }
+
+        .face {
+            position: relative;
+            top: 35px;
+            width: 380px;
+            background-color: rgb(232, 212, 131);
+            height: 285px;
+            border: 10px solid rgb(33, 24, 22);
+            border-radius: 100%;
+            z-index: 20;
+            overflow: hidden;
+        }
+
+        .ear {
+            top: -3px;
+            position: absolute;
+            background-color: rgb(232, 212, 131);
+            width: 55px;
+            height: 65px;
+            z-index: 10;
+            border: 10px solid rgb(33, 24, 22);
+            border-top-left-radius: 70%;
+            border-top-right-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .ear.left {
+            left: 65px;
+            border-top-left-radius: 90%;
+            border-top-right-radius: 70%;
+            transform: rotate(-25deg);
+        }
+
+        .ear.right {
+            right: 65px;
+            border-top-left-radius: 70%;
+            border-top-right-radius: 90%;
+            transform: rotate(25deg);
+        }
+
+        .inear {
+            width: 9px;
+            height: 50px;
+            background-color: rgb(33, 24, 22);
+            border-top-left-radius: 50%;
+        }
+
+        .ear.right .inear {
+            border-top-left-radius: 0%;
+            border-top-right-radius: 50%;
+        }
+
+        .eye {
+            top: 110px;
+            position: absolute;
+            border: 11px solid rgb(33, 24, 22);
+            border-radius: 100%;
+        }
+
+        .eye.left {
+            left: 145px;
+        }
+
+        .eye.right {
+            right: 145px;
+        }
+
+        .nose {
+            top: 140px;
+            position: absolute;
+            width: 12px;
+            height: 5px;
+            ;
+            background-color: rgb(33, 24, 22);
+            border: 10px solid rgb(33, 24, 22);
+            border-radius: 100%;
+            left: 175px;
+        }
+
+        .cheek {
+            top: 130px;
+            position: absolute;
+            width: 17px;
+            height: 3px;
+            ;
+            background-color: rgb(194, 117, 100);
+            border: 10px solid rgb(194, 117, 100);
+            border-radius: 100%;
+        }
+
+        .cheek.left {
+            left: 83px;
+        }
+
+        .cheek.right {
+            right: 83px;
+        }
+
+
+
+        .facehair {
+            top: 160px;
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            ;
+            background-color: rgb(33, 24, 22);
+            border: 3px solid rgb(33, 24, 22);
+            border-top-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+        }
+
+        .facehair.one {
+            left: 0;
+            transform: rotate(-30deg);
+        }
+
+        .facehair.two {
+            right: 0;
+            transform: rotate(30deg);
+        }
+
+        .facehair.three {
+            left: 20px;
+            top: 195px;
+            transform: rotate(-30deg);
+        }
+
+        .facehair.four {
+            right: 20px;
+            top: 195px;
+            transform: rotate(30deg);
+        }
+
+        .mouse {
+            top: -40px;
+            width: 95px;
+            height: 200px;
+            position: absolute;
+            border: 11px solid rgb(33, 24, 22, 0);
+            border-bottom-color: rgb(33, 24, 22);
+            border-radius: 100%;
+            background-color: rgb(232, 212, 131);
+            z-index: -10
+        }
+
+        .mouse.left {
+            left: 100px;
+        }
+
+        .mouse.right {
+            right: 100px;
+        }
+
+        .mouse.in {
+            background-color: rgb(187, 87, 87);
+            top: 150px;
+            width: 20px;
+            height: 25px;
+            border-color: rgb(33, 24, 22);
+            left: 170px;
+            z-index: -20;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="licat">
+        <img class="hair_back" src="hair_back.svg" alt="hair_back">
+        <img class="hair_front" src="hair_front.svg" alt="hair_front">
+        <div class="ear left">
+            <div class="inear"></div>
+        </div>
+        <div class="ear right">
+            <div class="inear"></div>
+        </div>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="cheek left"></div>
+            <div class="cheek right"></div>
+            <div class="nose"></div>
+            <div class="mouse left"></div>
+            <div class="mouse right"></div>
+            <div class="mouse in"></div>
+            <div class="facehair one"></div>
+            <div class="facehair two"></div>
+            <div class="facehair three"></div>
+            <div class="facehair four"></div>
+        </div>
+    </div>
+</body>
+
+</html>

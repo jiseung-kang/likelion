@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        #app {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            width: 520px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid #C4C4C4;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            box-sizing: border-box;
+            font-family: 'Spoqa Han Sans Neo';
+            font-style: normal;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #767676;
+        }
+
+        .title {
+            padding-top: 20px;
+            padding-left: 164px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #C4C4C4;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            display: flex;
+            position: inherit;
+        }
+
+        .btn-close {
+            content: '';
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(45deg);
+            margin-left: 148px;
+        }
+
+        .btn-close::before {
+            content: '';
+            position: absolute;
+            width: 22.4px;
+            height: 0px;
+            border: 1px solid #767676;
+        }
+
+        .btn-close::after {
+            content: '';
+            position: absolute;
+            width: 22.4px;
+            height: 0px;
+            border: 1px solid #767676;
+            transform: rotate(90deg);
+        }
+
+        .txt-desc {
+            padding-top: 26px;
+            padding-bottom: 24px;
+            font-size: 20px;
+            font-weight: 500px;
+            line-height: 24px;
+        }
+
+        .box-input {
+            width: 472px;
+            height: 50px;
+            border: 1px solid #C4C4C4;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding-left: 16px;
+            margin-bottom: 10px;
+        }
+
+        .login .box-input:focus:required:invalid {
+            background: pink;
+            border: 2px solid #F4492E;
+        }
+
+        .err-msg-id, .err-msg-pw, .err-msg-cor{
+            display: none;
+            margin-left: 4px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17.53px;
+            color: #F4492E;
+            margin-bottom: 10px;
+        }
+
+        .input-id:focus:required:invalid~.err-msg-id, 
+        .input-pw:focus:required:invalid~.err-msg-pw {
+            display: block;
+        }
+
+        .input-pw:focus:required:valid~.err-msg-cor
+        {
+            display: block;
+        }
+
+        .check {
+            margin-top: 6px;
+            display: flex;
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            color: #767676;
+            margin-left: 8px;
+        }
+
+        input[id="cb"] {
+            display: none;
+        }
+
+        input[id="cb"]+label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 22px;
+            height: 22px;
+            border: 1px solid #767676;
+            border-radius: 100%;
+        }
+
+        input[id="cb"]+label::after {
+            content: '';
+            position: relative;
+            width: 5.5px;
+            height: 8.5px;
+            bottom: 2.75px;
+            border: 1px solid #767676;
+            border-radius: 1px;
+            border-top: 0;
+            border-left: 0;
+            transform: rotate(45deg);
+        }
+
+        input[id="cb"]:checked+label {
+            background-color: #2F80ED;
+            border-color: #2F80ED;
+        }
+
+        input[id="cb"]:checked+label::after {
+            content: '';
+            position: relative;
+            width: 5.5px;
+            height: 8.5px;
+            bottom: 2.75px;
+            border: 1px solid #FFFFFF;
+            border-radius: 1px;
+            border-top: 0;
+            border-left: 0;
+            transform: rotate(45deg);
+        }
+
+        .txt-maintain {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 30.5px;
+        }
+
+        .btn-login {
+            margin-top: 20px;
+            width: 472px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            background: #2F80ED;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration-line: none;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .btn-login:active ~ .err-msg-cor  {
+            display: block;
+        }
+
+        .join_or_find {
+            color: #767676;
+            display: flex;
+            margin-top: 20px;
+            margin-left: 18px;
+            margin-right: 18px;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .btn-join_or_find {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 30px;
+        }
+
+        .connect {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #767676;
+            font-size: 14px;
+            line-height: 17.53px;
+            font-weight: 400;
+            font-weight: normal;
+            justify-content: space-between;
+        }
+
+        .line_div {
+            margin: 0;
+            padding: 0;
+            width: 210px;
+            height: 1px;
+            background-color: #C4C4C4;
+        }
+
+        .btn-others {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .btn-other {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 472px;
+            height: 50px;
+            border: 1px solid #767676;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .btn-other img {
+            position: absolute;
+            left: 12px;
+        }
+
+        .txt-other {
+            font-family: "Spoqa Han Sans Neo";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #767676;
+        }
+
+        .border-google {
+            border-color: #767676;
+        }
+
+        .border-facebook {
+            border-color: #2D9CDB;
+        }
+
+        .border-naver {
+            border-color: #00BF18;
+        }
+
+        .border-kakao {
+            border-color: #F2C94C;
+        }
+
+        @media screen and (max-width:768px) {
+            #app {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <menu class="title">
+            로그인 또는 회원가입
+            <a href="index.html" class="btn-close"></a>
+        </menu>
+        <h1 class="txt-desc">위니브에서 여러분의 궁금증을 해결하세요! :)</h1>
+        <form class="login">
+            <label for="id"></label>
+            <input type="text" placeholder="아이디" required class="box-input input-id" id="id">
+            <em class="err-msg-id">아이디를 입력해 주세요.</em>
+            <label for="pw"></label>
+            <input type="password" placeholder="비밀번호" required class="box-input input-pw" id="pw">
+            <em class="err-msg-pw">비밀번호를 입력해 주세요.</em>
+            <em class="err-msg-cor">아이디 혹은 비밀번호가 일치하지 않습니다.</em>
+            <article class="check">
+                <input type="checkbox" class="check" id="cb">
+                <label for="cb"></label>
+                <p class="txt-maintain">로그인 상태 유지</p>
+            </article>
+            <button class="btn-login">로그인</button>
+        </form>
+        <section class="join_or_find">
+            <a href="#" class="btn-join_or_find">회원가입</a>
+            <p>|</p>
+            <a href="#" class="btn-join_or_find">아이디/비밀번호 찾기</a>
+        </section>
+        <section class="connect">
+            <div class="line_div"></div>
+            <p class="txt-div">또는</p>
+            <div class="line_div"></div>
+        </section>
+        <section class="btn-others">
+            <a href="#" class="btn-other border-google"><img src="img/google.png" alt="google">
+                <p class="txt-other">구글 계정으로 로그인</p>
+            </a>
+            <a href="#" class="btn-other border-facebook"><img src="img/facebook.png" alt="facebook">
+                <p class="txt-other">페이스북 계정으로 로그인</p>
+            </a>
+            <a href="#" class="btn-other border-naver"><img src="img/naver.png" alt="naver">
+                <p class="txt-other">네이버 계정으로 로그인</p>
+            </a>
+            <a href="#" class="btn-other border-kakao"><img src="img/kakao.png" alt="kakao">
+                <p class="txt-other">카카오톡 계정으로 로그인</p>
+            </a>
+        </section>
+    </main>
+</body>
+
+</html>
