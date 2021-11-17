@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #app {
+            background-color: #F2F2F2;
+            width: 1060px;
+            height: 1170px;
+            margin-top: 86px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #BDBDBD;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+        .tit {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            color: #000000;
+            padding-top: 41px;
+            padding-bottom: 37px;
+
+        }
+
+        .border-div {
+            margin-left: auto;
+            margin-right: auto;
+            width: 650px;
+            height: 0px;
+            border: 2px solid #BDBDBD;
+        }
+
+        .cont-tab {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #828282;
+        }
+
+        .cont-tab li:first-child {
+            color: #000000;
+            font-weight: 800;
+        }
+
+        .cont-tab li:nth-child(2) {
+            margin-right: 60px;
+            margin-left: 60px;
+        }
+
+        .cont-movies {
+            width: 1003px;
+            height: 962px;
+            background: #FFFFFF;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            border: 2px solid #BDBDBD;
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: flex;
+            padding: 26px 27px 30px 27px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .cont-movie {
+            width: 220px;
+            height: 441px;
+            background: #FFFFFF;
+            border: 1px solid #BDBDBD;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <header>
+            <h1 class="tit">정글 시네마 영화 목록</h1>
+            <div class="border-div"></div>
+            <nav>
+                <ul class="cont-tab">
+                    <li><a href="#">현재상영영화</a></li>
+                    <li><a href="#">개봉예정영화</a></li>
+                    <li><a href="#">박스오피스</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="cont-movies">
+            <article class="cont-movie">
+                <img src="/영화목록페이지/포스터_위니브월드.png" alt="위니브 월드">
+                <dt>위니브 월드 : 새로운 시대</dt>
+                
+            </article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+            <article class="cont-movie"></article>
+        </section>
+    </main>
+</body>
+
+</html>
