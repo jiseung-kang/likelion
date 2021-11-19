@@ -161,3 +161,7 @@ row  잔액,         거스름돈 반환
     border-radius: 5px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
+
+.vending-machine .cont-return {
+    margin-top: 20px;
+}
