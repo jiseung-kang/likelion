@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Select box</title>
+</head>
+
+<style>
+    .cont-select {
+        box-sizing: border-box;
+    }
+
+    .cont-select {
+        position: relative;
+        border: 1px solid #C4C4C4;
+        text-align: left;
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 0 14px;
+        cursor: url('/pointer.png'), pointer;
+        background: #FFFFFF;
+    }
+
+    .cont-select::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        display: block;
+        width: 12px;
+        height: 8px;
+        top: 15px;
+        right: 10px;
+        background-size: 12px 8px;
+        background-image: url('/Polygon.png');
+    }
+
+    .btn-select {
+        display: flex;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        border: 0 none;
+        outline: 0 none;
+        padding-left: 15px;
+        background: transparent;
+        cursor: url('/pointer.png'), pointer;
+    }
+
+    .btn-select:focus {
+        font-size: 14px;
+        padding: 0 14px;
+        border: 3px solid #F8E4FF;
+        border-radius: 10px;
+    }
+
+    .list-member {
+        width: 200px;
+        height: 208px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+
+        position: absolute;
+        top: 28px;
+        left: 0;
+        width: 100%;
+        background: lightcoral;
+        color: #fff;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 6px;
+        overflow: hidden;
+        max-height: 0;
+        transition: .3s ease-in;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .list-member button {
+
+        width: 200px;
+        height: 40px;
+    }
+</style>
+
+<body>
+
+    <h2>셀렉트 박스 만들기</h2>
+    <article class="cont-select">
+        <button class="btn-select">최애 프로그래밍 언어</button>
+        <ul class="list-member">
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+        </ul>
+    </article>
+
+    <script>
+        const btn = document.querySelector('.btn-select');
+        const list = document.querySelector('.list-member');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('on');
+        });
+        list.addEventListener('click', (event) => {
+            if (event.target.nodeName === "BUTTON") {
+                btn.innerText = event.target.innerText;
+                btn.classList.remove('on');
+            }
+        });
+    </script>
+</body>
+
+</html>
