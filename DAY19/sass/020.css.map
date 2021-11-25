@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAYA,AAAA,UAAU,CAAC;EARP,KAAK,EASW,KAAK;EARrB,MAAM,EAQU,KAAK;CACxB;;AAED,AAAA,UAAU,CAAC;EAZP,KAAK,EAaW,KAAK;EAZrB,MAAM,EAYU,KAAK;EATjB,aAAa,EAAE,IAAS;CAU/B;;AAED,AAAA,QAAQ,CAAC;EAhBL,KAAK,EAiBW,KAAK;EAhBrB,MAAM,EAgBU,KAAK;CACxB",
+    "sources": [
+        "020.scss"
+    ],
+    "names": [],
+    "file": "020.css"
+}

@@ -1,0 +1,23 @@
+@mixin flex($align:null, $way:row) {
+    display: flex;
+    flex-direction: $way;
+    @content;
+
+    @if(#{$align}=='center') {
+        justify-content: center;
+        align-items: center;
+    }
+
+    @else if (#{$align}=='leftCenter') {
+        align-items: center; 
+    }
+
+    @else if (#{$align}=='spaceCenter') {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @else if (#{$align}=='space') {
+        justify-content: space-between;
+    }
+}
