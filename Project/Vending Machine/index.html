@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="app">
+        <section id="tit">
+            <h1 class="src-only">Cola Cola</h1>
+        </section>
+        <section id="vending-machine">
+            <h2 class="src-only">자판기</h2>
+            <ul class="lst-drink">
+                <li>
+                    <button class="btn-drink">
+                        <img src="./img/Original_Cola.png" alt="cola">
+                        <strong>Original_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="box-return">
+                <div class="cont-balance"></div>
+                <button class="btn-return"></button>
+            </div>
+            <div class="box-deposit">
+                <input type="number" placeholder="입금액 입력"/>
+                <button class="deposit">입금</button>
+            </div>
+            <div class="box-get">
+                <div class="cont-get">
+                    <img src="./img/Original_Cola.png" alt="">
+                    <span>Original_Cola</span>
+                    <div class="box-cnt"></div>
+                </div>
+                <button class="btn-toget"></button>
+            </div>
+            <div class="my-balance">소지금 :
+                <span>25,000원</span>
+            </div>
+        </section>
+        <section id="my-info">
+            <h2 class="src-only">내 정보</h2>
+            <span class="tit-get">획득한 음료</span>
+            <div class="box-get">
+                <div class="cont-get">
+                    <img src="./img/Original_Cola.png" alt="">
+                    <span>Original_Cola</span>
+                    <div class="box-cnt"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
