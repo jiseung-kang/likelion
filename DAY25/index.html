@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      .ball {
+        display: inline-block;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: pink;
+        text-align: center;
+        line-height: 40px;
+        color: black;
+        font-weight: 700;
+        font-size: 14px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      .ball:nth-child(7) {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>로또 번호 자동 생성기</p>
+    <div id="result"></div>
+
+    <script>
+      //  idea : 피셔에이츠 알고리즘
+      function fisher() {
+        const nums = Array(45)
+          .fill()
+          .map((v, i) => i + 1);
+        const result = [];
+        while (nums.length > 0) {
+          const random = Math.floor(Math.random() * 45);
+          //  구현중..
+        }
+      }
+
+      function randomNum() {
+        let arr = new Array();
+        let tmp = 0;
+        while (arr.length < 7) {
+          tmp = Math.floor(Math.random() * 45);
+          if (arr.includes(tmp) == false) {
+            arr.push(tmp);
+          }
+        }
+        return {
+          doLotto: function () {
+            arr.sort((a, b) => a - b);
+            return arr;
+          },
+        };
+      }
+      // closure 연습
+      const lotto = randomNum();
+      const balls = lotto.doLotto();
+
+      const lotto2 = randomNum();
+      const winNum = lotto2.doLotto();
+
+      function reward() {
+        let count = 0;
+        for (let b of balls) {
+          if (winNum.includes(b)) {
+            count += 1;
+          }
+        }
+        return count >= 5 ? "Win" : "Lose";
+      }
+      document.write(reward());
+      //
+
+      const $result = document.querySelector("#result");
+
+      function draw(n, $parent) {
+        const $ball = document.createElement("div");
+        $ball.className = "ball";
+        $ball.textContent = n;
+        $parent.appendChild($ball);
+      }
+
+      for (let i = 0; i < balls.length; i++) {
+        setTimeout(() => {
+          draw(balls[i], $result);
+        }, 400 * i);
+      }
+    </script>
+  </body>
+</html>
