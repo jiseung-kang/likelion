@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function randomFunc(min, max) {
+        let result = Math.floor(Math.random() * (max - min)) + min;
+        return result;
+      }
+
+      let lottoArr = [];
+
+      function lottoGenerator() {
+        while (lottoArr.length < 6) {
+          let result = randomFunc(1, 46);
+          let isGot = false;
+          lottoArr.forEach((element) => {
+            if (element === result) {
+              isGot = true;
+            }
+          });
+          // 중복 판단
+          if (!isGot) {
+            lottoArr.push(result);
+          }
+        }
+        return lottoArr;
+      }
+
+      console.log(lottoGenerator());
+    </script>
+  </body>
+</html>

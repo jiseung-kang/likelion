@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        background-color: grey;
+        text-align: center;
+        line-height: 300px;
+        font-size: 24px;
+        color: thistle;
+        font-weight: 500;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        width: 500px;
+        margin: auto;
+        padding: 0;
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      button {
+        border-radius: 20px;
+        border: 1px solid darkolivegreen;
+        width: 50px;
+        margin-right: 10px;
+        height: 20px;
+        text-align: center;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">신호등</div>
+    <ul>
+      <li><button class="red"></button></li>
+      <li><button class="yellow"></button></li>
+      <li><button class="green"></button></li>
+    </ul>
+
+    <script>
+      const redBtn = document.querySelector(".red");
+      const yellowBtn = document.querySelector(".yellow");
+      const greenBtn = document.querySelector(".green");
+      const box = document.querySelector(".box");
+
+      redBtn.addEventListener("click", function () {
+        box.classList.remove("green", "yellow");
+        box.classList.toggle("red");
+      });
+
+      yellowBtn.addEventListener("click", function () {
+        box.classList.remove("green", "red");
+        box.classList.toggle("yellow");
+      });
+
+      greenBtn.addEventListener("click", function () {
+        box.classList.remove("red", "yellow");
+        box.classList.toggle("green");
+      });
+    </script>
+  </body>
+</html>
