@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+#app {
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+
+.img-tit {
+  width: 386px;
+}
+
+#vending-machine {
+  width: 386px;
+  padding: 37px 27px 28px;
+  background-color: #ffffff;
+  margin: 67px auto;
+}
+
+#vending-machine .lst-drink {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+#vending-machine .lst-drink li {
+  position: relative;
+  width: 30%;
+  height: 130px;
+}
+
+#vending-machine .lst-drink li .btn-drink {
+  width: 100%;
+}
+
+#vending-machine .lst-drink li .btn-drink img {
+  width: 36px;
+}
