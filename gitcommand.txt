@@ -1,3 +1,0 @@
-git remote add origin [repository 주소]
-git remote -v
-git push -u origin master
