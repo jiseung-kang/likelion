@@ -12,15 +12,12 @@ export class SampleModel {
 
 		this.rotationY = info.rotationY || 0;
 
-		this.gltfLoader.load(
-			'/models/iphone.glb',
-			gltf => {
-				this.mesh = gltf.scene.children[0];
-				this.mesh.castShadow = true;
-				this.mesh.rotation.y = this.rotationY;
-				this.mesh.position.set(this.x, this.y, this.z);
-				this.scene.add(this.mesh);
-			}
-		);
+		this.gltfLoader.load('/models/iphone.glb', (gltf) => {
+			this.mesh = gltf.scene.children[0];
+			this.mesh.castShadow = true;
+			this.mesh.rotation.y = this.rotationY;
+			this.mesh.position.set(this.x, this.y, this.z);
+			this.scene.add(this.mesh);
+		});
 	}
 }
