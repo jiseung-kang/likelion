@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nunjucks Test 2</title>
+</head>
+<body>
+  <h1>Nunjucks Test 2</h1>
+  <h2>예금</h2>
+  {% for i in 예금 %}
+  <p>{{i.은행명}}</p>
+  <p>{{i.계좌번호}}</p>
+  <p>{{i.금액}}</p>
+  {% endfor %}
+  <h2>기술</h2>
+  {% for i in 기술 %}
+  {% for j in 습득연도 %}
+  <p>{{i}} : {{j}} </p>
+  {% endfor %}
+  {% endfor %}
+</body>
+</html>
