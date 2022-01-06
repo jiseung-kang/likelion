@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{ blog.title }}</h1>
+    <p>{{ blog.section }}</p>
+    <p>{{ blog.pubDate }}, {{ blog.modDate }}</p>
+    <p>{{ blog.content }}</p>
+
+    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="./write">Update</a></div>
+    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/">Delete</a></div>
+
+{% endblock %}
