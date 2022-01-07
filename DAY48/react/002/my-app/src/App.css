@@ -1,0 +1,10 @@
+.newClass{
+  width: 100%;
+  height: 100%px;
+  background-color: black;
+  color: white;
+}
+
+.resume {
+  border: 1px solid black;
+}
